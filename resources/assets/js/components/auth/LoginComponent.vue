@@ -1,6 +1,5 @@
 <template>
     <div>
-
         <div v-if="this.errors.email" class="alert alert-danger" role="alert">{{this.errors.email[0]}}</div>
 
         <div class="form-group"><label class="text-normal text-dark">Username</label>

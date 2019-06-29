@@ -1,36 +1,53 @@
 <template>
-    <div class="col-12 col-md-4 peer pX-40 pY-80 h-100 bgc-white scrollable pos-r" style="min-width:320px">
-        <h4 class="fw-300 c-grey-900 mB-40">Register</h4>
-        <form>
-            <div class="form-group"><label class="text-normal text-dark">Username</label>
-                <input type="text"
-                       class="form-control"
-                       placeholder="John Doe">
-            </div>
-            <div class="form-group"><label class="text-normal text-dark">Email Address</label>
-                <input type="email"
-                       class="form-control"
-                       placeholder="name@email.com">
-            </div>
-            <div class="form-group"><label class="text-normal text-dark">Password</label>
-                <input type="password"
-                       class="form-control"
-                       placeholder="Password">
-            </div>
-            <div class="form-group"><label class="text-normal text-dark">Confirm Password</label>
-                <input type="password"
-                       class="form-control"
-                       placeholder="Password">
-            </div>
-            <div class="form-group">
-                <button class="btn btn-primary">Register</button>
-            </div>
-        </form>
+    <div>
+        <div v-if="Object.keys(this.errors).length>0" class="alert alert-danger" role="alert">
+            <ul>
+                <li v-for="error in this.errors">
+                    {{ error[0] }}
+                </li>
+            </ul>
+        </div>
+        <div class="form-group ">
+            <label class="text-normal text-dark">Name</label>
+            <input type="text"
+                   name="name"
+                   class="form-control"
+                   placeholder="John Doe">
+        </div>
+        <div class="form-group">
+            <label class="text-normal text-dark">Email Address</label>
+            <input type="email"
+                   name="email"
+                   class="form-control"
+                   placeholder="name@email.com">
+        </div>
+        <div class="form-group">
+            <label class="text-normal text-dark">Password</label>
+            <input type="password"
+                   name="password"
+                   class="form-control"
+                   placeholder="Password">
+        </div>
+        <div class="form-group">
+            <label class="text-normal text-dark">Confirm Password</label>
+            <input type="password"
+                   name="password_confirmation"
+                   class="form-control"
+                   placeholder="Password">
+        </div>
+        <div class="form-group">
+            <button class="btn btn-primary">Register</button>
+        </div>
     </div>
 </template>
 
 <script>
     export default {
+        props: ['errors'],
+        mounted() {
+            // Do something useful with the data in the template
+            console.log(this.errors)
+        },
         name: "RegisterComponent"
     }
 </script>
