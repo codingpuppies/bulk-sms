@@ -1,4 +1,4 @@
-@extends('layouts.auth_app')
+@extends('app_layouts.auth_app')
 
 @section('content')
     <div class="peers ai-s fxw-nw h-100vh">

@@ -16,18 +16,12 @@ mix.js('resources/assets/js/app.js', 'public/js')
 
 /*theme css*/
 mix.styles([
-    'public/css/loader.css',
+    'resources/assets/theme/adminator/style.css',
 ], 'public/css/theme.css');
 
-/* SCSS to CSS Theme css files */
-mix.sass('resources/assets/theme/adminator/src/assets/styles/index.scss', 'public/css/theme');
-mix.copyDirectory('resources/assets/theme/adminator/src/assets/scripts/', 'public/js/theme');
 
-
-mix.js('resources/assets/theme/adminator/src/assets/scripts/index.js', 'public/js/bundle.js');
-
-// mix.js('public/js/theme/index.js','public/js/theme/import');
-// mix.combine(['public/js/theme/'], 'public/js/bundle.js');
+mix.js('resources/assets/theme/adminator/bundle.js', 'public/js/theme/bundle.js');
+mix.js('resources/assets/theme/adminator/vendor.js', 'public/js/theme/vendor.js');
 
 /*Theme JS*/
 mix.scripts([

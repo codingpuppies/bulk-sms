@@ -1,8 +1,8 @@
 {
-    "/js/bundle.js": "/js/bundle.js",
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
-    "/css/theme/index.css": "/css/theme/index.css",
+    "/js/theme/vendor.js": "/js/theme/vendor.js",
+    "/js/theme/bundle.js": "/js/theme/bundle.js",
     "/css/theme.css": "/css/theme.css",
     "/js/theme.js": "/js/theme.js"
 }

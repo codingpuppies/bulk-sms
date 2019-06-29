@@ -1,4 +1,4 @@
-@extends('layouts.admin_app')
+@extends('app_layouts.admin_app')
 
 @section('content')
         <main class="main-content bgc-grey-100">
