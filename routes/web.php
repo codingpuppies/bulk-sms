@@ -12,7 +12,8 @@
 */
 
 Route::get('/', function () {
-    return view('auth.login');
+//    return view('auth.login');
+    return view('welcome');
 });
 
 /*Auth Routes*/
@@ -31,7 +32,7 @@ Route::group(['middleware' => 'auth'], function()
     /*Inbox*/
     Route::get('/write-sms', 'InboxController@show_write_sms_form')->name('write-sms');
     Route::get('/inbox', 'InboxController@show_message_list')->name('list-sms');
-    Route::get('/send-sms', 'HomeController@index')->name('send-sms');
+    Route::get('/send-sms', 'InboxController@send-sms')->name('send-sms');
 
     /*Phonebook*/
     Route::get('/new-contact', 'PhonebookController@show_create_new_contact_form')->name('new-contact');
@@ -56,3 +57,6 @@ Route::group(['middleware' => 'auth'], function()
     Route::get('/settings/personal', 'SettingsController@show_personal_settings')->name('settings.personal');
     Route::get('/settings/sms', 'SettingsController@show_sms_settings')->name('settings.sms');
 });
+
+Route::get('/users', 'UsersController@getUsers');
+Route::delete('/users/{user}/delete', 'UsersController@deleteUser');

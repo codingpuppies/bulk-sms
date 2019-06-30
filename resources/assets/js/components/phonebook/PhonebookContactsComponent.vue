@@ -6,7 +6,7 @@
                     <h4 class="c-grey-900 mB-20">
                         Contacts List
                     </h4>
-                    <table id="dataTable" class="table table-striped table-bordered" cellspacing="0"
+                    <!--<table id="dataTable" class="table table-striped table-bordered" cellspacing="0"
                            width="100%">
                         <thead>
                         <tr>
@@ -93,7 +93,10 @@
                         </tr>
 
                         </tbody>
-                    </table>
+                    </table>-->
+                    <div id="people">
+                        <v-server-table url="/people" :columns="columns" :options="options"></v-server-table>
+                    </div>
                 </div>
             </div>
         </div>
@@ -105,6 +108,12 @@
     export default {
         name: "PhonebookContactsComponent"
     }
+    new Vue({
+        el:"#people",
+        data: {
+            columns:['id','name','age'],
+        }
+    });
 </script>
 
 <style scoped>

@@ -8,8 +8,9 @@
     <style></style>
     {{--theme--}}
     <link href="/css/theme.css" rel="stylesheet">
-    <script type="text/javascript" src="/js/theme/vendor.js"></script>
-    <script type="text/javascript" src="/js/theme/bundle.js"></script>
+    <link href="/css/loader.css" rel="stylesheet">
+
+    <script defer type="text/javascript" src="/js/loader.js"></script>
 </head>
 <body class="app">
 <div id="app">
@@ -30,6 +31,11 @@
     </div>
     {{--@include('partials.plugin.footer')--}}
 </div>
-<script type="text/javascript" src="/js/app.js"></script>
+
+<script defer type="text/javascript" src="/js/app.js"></script>
+<script defer type="text/javascript" src="/js/vuetable.min.js"></script>
+<script defer type="text/javascript" src="/js/theme/vendor.js"></script>
+<script defer type="text/javascript" src="/js/theme/bundle.js"></script>
+
 </body>
 </html>

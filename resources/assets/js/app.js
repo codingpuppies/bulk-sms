@@ -57,6 +57,10 @@ Vue.component('settings-sidebar', require('./components/settings/SettingsSidebar
 Vue.component('settings-personal', require('./components/settings/SettingsPersonalComponent.vue'));
 Vue.component('settings-sms', require('./components/settings/SettingsSmsDetailsComponent.vue'));
 
+Vue.component('all-users', require('./components/DataTableVue.vue'));
+
+import swal from 'sweetalert2';
+window.Fire = new Vue();
 
 const app = new Vue({
     el: '#app'
